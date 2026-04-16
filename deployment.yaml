@@ -6,17 +6,17 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: student-degree
+    app: student-degree
   template:git
     metadata:
-      labels:
-        app: student-degree
+    labels:
+    app: student-degree
     spec:
-      containers:
-      - name: student-degree-container
-        image: kalyanram0906/html-demo:latest
-        ports:
-        - containerPort: 80
+    containers:
+    - name: student-degree-container
+    image: kalyanram0906/html-demo:latest
+    ports:
+    - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -28,5 +28,5 @@ spec:
     app: student-degree
   ports:
     - port: 80
-      targetPort: 80
-      nodePort: 32765
+    targetPort: 80
+    nodePort: 32765
